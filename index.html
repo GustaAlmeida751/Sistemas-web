@@ -12,9 +12,10 @@
         <button onclick="mostrarTela('login')">Login</button>
         <button onclick="mostrarTela('produtos')">Produtos</button>
         <button onclick="mostrarTela('admin')">Admin</button>
+        <button onclick="mostrarTela('perfil')">perfil</button>
     </nav>
 
-    <section id="tela-login">
+    <section id="tela-login" style="display: none;">
         <h2>Tela login</h2>
         <p>Aqui entrará o formulario da aula 2</p>
     </section>
@@ -29,16 +30,22 @@
         <p>Só quem for admin pode acessar (Aula 6)</p>
     </section>
 
+    <section id="tela-perfil" style="display: none;">
+        <h2>Area do perfil</h2>
+        <p>este é seu perfil</p>
+    </section>
+
     <script>
         function mostrarTela(nome){
            
-            const tela = document.querySelectorAll('section')
-            tela.forEach(tela => {
-                tela.style.dysplay = 'none';
+            const telas = document.querySelectorAll('section')
+            telas.forEach(telas => {
+                telas.style.display = 'none';
             });
 
-            const telaEscolhida = document.getElementById('tela-'+nome)
-            telaEscolhida.style.display = 'block'
+            const telaEscolhida = document.getElementById('tela-' + nome)
+            telaEscolhida.style.display = 'block';
+            
         }
     </script>
 </body>
