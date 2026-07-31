@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Painel Loja🛒</h1>
+    <nav>
+        <button onclick="mostrarTela('login')">Login</button>
+        <button onclick="mostrarTela('produtos')">Produtos</button>
+        <button onclick="mostrarTela('admin')">Admin</button>
+    </nav>
+
+    <section id="tela-login">
+        <h2>Tela login</h2>
+        <p>Aqui entrará o formulario da aula 2</p>
+    </section>
+
+    <section id="tela-produtos" style="display: none;">
+        <h2>Tela produto</h2>
+        <p>Aqui entrará a lista vinda da API(aula 4)</p>
+    </section>
+
+    <section id="tela-admin" style="display: none;">
+        <h2>Area admin</h2>
+        <p>Só quem for admin pode acessar (Aula 6)</p>
+    </section>
+
+    <script>
+        function mostrarTela(nome){
+           
+            const tela = document.querySelectorAll('section')
+            tela.forEach(tela => {
+                tela.style.dysplay = 'none';
+            });
+
+            const telaEscolhida = document.getElementById('tela-'+nome)
+            telaEscolhida.style.display = 'block'
+        }
+    </script>
+</body>
+</html>
